@@ -1,0 +1,383 @@
+#modal.modal_overlay {
+    display: flex;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 1920px;
+    height: 1583px;
+    background: rgba(67, 67, 67, 0.5);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal .modal_window {
+    position: fixed;
+    top: 245px;
+    width: 1110px;
+    height: 700px;
+    padding: 0px;
+    border: 1px solid #434343;
+    background: #F8F8F3;
+}
+
+#modal_mag_1 .modal_window_2 {
+    position: fixed;
+    top: 245px;
+    width: 1110px;
+    height: 700px;
+    padding: 0px;
+    border: 1px solid #434343;
+    background: #F8F8F3;
+}
+
+#modal .close_area {
+    cursor: pointer;
+    margin-left: 143px;
+}
+
+.modal_upper {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal_left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.modal_right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 416px;
+    margin-top: 40px;
+}
+
+.modal_title {
+    color: #434343;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.modal_explain {
+    color: #434343;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    margin-top: 28px;
+}
+
+.modal_recommend_btn_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.modal_recommend_btn {
+    display: flex;
+    width: 170px;
+    height: 40px;
+    color: #f8f8f3;
+    font-weight: normal;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    background-color: #434343;
+    cursor: pointer;
+}
+
+.modal_line {
+    line-height: 1px;
+    background-color: #434343;
+    opacity: 100%;
+    margin-top: 35px;
+}
+
+.modal_content {
+    display: flex;
+    height: 490px;
+    flex-direction: column;
+    margin-left: 60px;
+    overflow-y: scroll;
+}
+
+.all_content_num_container {
+    display: flex;
+    color: #434343;
+    font-weight: normal;
+    font-size: 16px;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.modal_recommend_content_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_recommend_content {
+    display: flex;
+    width: 990px;
+    height: 384px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #434343;
+}
+
+.modal_profile_container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.modal_profile_pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+}
+
+.modal_profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8px;
+}
+
+.modal_profile_nickname {
+    color: #434343;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.modal_profile_date {
+    color: #434343;
+    font-size: 8px;
+}
+
+.modal_recommend_title {
+    color: #434343;
+    font-size: 20px;
+    margin-left: 60px;
+    margin-bottom: 8px;
+}
+
+.modal_recommend_explain {
+    color: #434343;
+    font-size: 14px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.modal_recommended_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 60px;
+    margin-right: 60px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+.modal_recommended_img {
+    max-height: 135px;
+    margin-right: 80px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #434343;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(67, 67, 67, 0.2);
+}
+
+.modal_recommender_btn_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    align-self: flex-end;
+    margin-right: 60px;
+}
+
+.modal_recommender_btn {
+    display: flex;
+    width: 138px;
+    height: 32px;
+    color: #f8f8f3;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    background-color: #434343;
+    cursor: pointer;
+}
+
+#modal .modal_window_2 {
+    position: fixed;
+    top: 245px;
+    width: 1110px;
+    height: 700px;
+    padding: 60px;
+    border: 1px solid #434343;
+    background: #F8F8F3;
+    z-index: 100;
+}
+
+.close_area2 {
+    margin-left: 963px;
+    cursor: pointer;
+}
+
+.modal2_title {
+    color: #434343;
+    font-weight: normal;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+input::placeholder {
+    color: #434343;
+    font-size: 20px;
+    opacity: 50%;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=text] {
+    width: 990px;
+    height: 60px;
+    border: solid 1px #434343;
+    color: #434343;
+    font-size: 20px;
+    margin-top: 30px;
+    background-color: #F8F8F3;
+    padding-left: 20px;
+    flex-shrink: 0;
+}
+
+.recommend_explain_input {
+    width: 990px;
+    height: 330px;
+    border: solid 1px #434343;
+    color: #434343;
+    font-size: 20px;
+    background-color: #F8F8F3;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-top: 15px;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #434343;
+    font-size: 20px;
+    opacity: 50%;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.submit_recommend_btn_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.submit_recommend_btn {
+    display: flex;
+    width: 170px;
+    height: 40px;
+    color: #f8f8f3;
+    font-weight: normal;
+    font-size: 17px;
+    align-items: center;
+    justify-content: center;
+    background-color: #434343;
+    cursor: pointer;
+}
+
+.modal_window_mag {
+    position: fixed;
+    top: 245px;
+    left: 405px;
+    width: 1110px;
+    height: 700px;
+    padding: 0px;
+    border: 1px solid #434343;
+    background: #F8F8F3;
+}
+
+.close_area3 {
+    margin-left: 1023px;
+    margin-top: 40px;
+}
+
+.close_area4 {
+    margin-left: 1023px;
+    margin-top: 40px;
+}
+
+.close_area5 {
+    margin-left: 1023px;
+    margin-top: 40px;
+}
+
+.close_area6 {
+    margin-left: 1023px;
+    margin-top: 40px;
+}
+
+.mag_title {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+
+.mag_explain {
+    font-weight: normal;
+    font-size: 20px;
+    margin-left: 60px;
+}
+
+.mag_date {
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 974px;
+}
+
+.mag_line {
+    line-height: 1px;
+    background-color: #434343;
+    opacity: 100%;
+    margin-top: 7px;
+}
+
+.mag_content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.mag {
+    width: 475px;
+    height: 441px;
+    font-size: 18px;
+    line-height: 34px;
+    margin-left: 20px;
+}

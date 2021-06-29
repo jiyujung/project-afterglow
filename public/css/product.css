@@ -1,0 +1,280 @@
+body {
+  width: 1920px;
+  height: 1080px;
+  background-color: #f8f8f3;
+}
+
+section {
+  display: flex;
+  flex-flow: row;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #434343;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #434343;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #434343;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #434343;
+  margin-top: 6.5px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #f8f8f3;
+}
+
+.similar_label {
+  font-size: 20px;
+  font-weight: normal;
+  color: #434343;
+  margin-bottom: 20px;
+}
+
+.similar_container {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 950px;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  border-color: #434343;
+  padding-left: 40px;
+  padding-top: 36px;
+}
+
+.product {
+  width: 160px;
+  height: 160px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #434343;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.similar_more {
+  margin-top: 16px;
+  margin-left: 52px;
+}
+
+.right_container {
+  display: flex;
+  flex-flow: column;
+  width: 1680px;
+  height: 950px;
+  border-width: 0px 1px 1px 0px;
+}
+
+.product_container {
+  display: flex;
+  flex-flow: row;
+  width: 1680px;
+  height: 840px;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 996px;
+  height: 840px;
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  border-color: #434343;
+}
+
+.product_img {
+  max-width: 616px;
+  max-height: 650px;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: column;
+  width: 684px;
+  height: 840px;
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  border-color: #434343;
+  padding-left: 40px;
+  padding-top: 90px;
+}
+
+.dilution_container {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 92px;
+  margin-top: 30px;
+}
+
+.question_mark {
+  margin-left: 8px;
+  margin-right: 17px;
+}
+
+.dilution {
+  margin-left: 9px;
+}
+
+.explain {
+  width: 552px;
+  margin-top: 60px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #434343;
+  line-height: 30px;
+}
+
+.vp_container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 92px;
+  margin-top: 30px;
+}
+
+.volume {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: -14px;
+}
+
+.volume_selected {
+  font-size: 18px;
+  font-weight: normal;
+  color: #434343;
+  margin-right: 14px;
+  line-height: 30px;
+}
+
+.volume_unselected {
+  font-size: 18px;
+  font-weight: normal;
+  opacity: 20%;
+  color: #434343;
+  margin-right: 14px;
+  line-height: 30px;
+}
+
+.price_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.won {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 3px;
+}
+
+.btm_container {
+  width: 1680px;
+  height: 110px;
+  border-style: solid;
+  border-width: 0px 1px 1px 0px;
+  border-color: #434343;
+  padding-left: 108px;
+  display: flex;
+  align-items: center;
+}
+
+.rate_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 28px;
+}
+
+.rate {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+
+.rate_fill {
+  margin-right: 14px;
+}
+
+.rate_blank {
+  margin-right: 14px;
+}
+
+.review_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.review_first {
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 30px;
+  width: 474px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btm_right_container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 146px;
+}
+
+.viewmore_btn {
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+.favorite_btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-style: solid;
+  border-width: 0px 1px;
+  height: 110px;
+  width: 110px;
+  border-color: #434343;
+}
+
+.page_move {
+  display: flex;
+  background-color: #434343;
+  width: 348px;
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rv_image {
+  max-width: 139px;
+  max-height: 139px;
+  margin: 0 auto;
+}

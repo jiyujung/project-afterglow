@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="/css/header.css" type="text/css" />
+  <link rel="stylesheet" href="/css/fragrance.css" type="text/css" />
+  <title>여향 | Fragrance</title>
+</head>
+
+<body>
+  <header>
+    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"></a>
+    <nav>
+      <ul class="nav_links">
+        <li>
+          <a href="/recommend">추천</a>
+        </li>
+        <li>
+          <a href="/fragrance">프레그런스</a>
+        </li>
+        <li>
+          <a href="/bathandbody">배스 앤 바디</a>
+        </li>
+        <li>
+          <a href="/homefragrance">홈 프레그런스</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="cta_area">
+      <li>
+        <a class="cta_mypage" href="/mypage"><img src="/img/mypage.svg"></a>
+      </li>
+    </ul>
+  </header>
+  <section>
+    <article class="left_container">
+      <form action="/fragrance/list/search/1" method="get">
+        <div class="all_search_area">
+          <h1>통합검색</h1>
+          <div class="search_area">
+            <input type="text" placeholder="키워드를 입력하세요" name="fragrance">
+            <input type="image" class="search_icon" src="/img/search_small.svg">
+          </div>
+        </div>
+      </form>
+      <div class="dilution_area">
+        <h1>부향률</h1>
+        <div class="dilution_check_area">
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">퍼퓸(20~30%)</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">오 드 퍼퓸(10~20%)</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">오 드 뚜왈렛(5~10%)</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">오 드 코롱(3~5%)</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">샤워 코롱(1~3%)</label>
+          </div>
+        </div>
+      </div>
+      <div class="brand_area">
+        <h1>브랜드</h1>
+        <div class="search_area">
+          <input type="text" placeholder="브랜드명 검색">
+          <img class="search_icon" src="/img/search_small.svg">
+        </div>
+        <div class="scroll_check_area">
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">조말론</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">랑방</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">클린</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">페라리</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">캘빈 클라인</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">베르사체</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">딥디크</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">구찌</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">입생로랑</label>
+          </div>
+        </div>
+      </div>
+      <div class="note_area">
+        <h1>노트</h1>
+        <div class="search_area">
+          <input type="text" placeholder="노트명 검색">
+          <img class="search_icon" src="/img/search_small.svg">
+        </div>
+        <div class="scroll_check_area">
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">석류</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">레몬</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">카씨스</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">베르가못</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">카다멈</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">만다린 오렌지</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">블루벨</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">머르</label>
+          </div>
+          <div class="check_area">
+            <input type="checkbox"><label class="check_text">파출리</label>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="right_container">
+      <div class="right_nav_container">
+        <div class="category_text">프레그런스 ></div>
+        <div class="align_menu">
+          <div class="align_btn"><a href="/fragrance/list/recent/1">최신순</a></div>
+          <div class="align_btn"><a href="/fragrance/list/1">인기순</a></div>
+          <div class="align_btn"><a href="/fragrance/list/low/1">낮은가격순</a></div>
+          <div class="align_btn"><a href="/fragrance/list/high/1">높은가격순</a></div>
+        </div>
+      </div>
+      <div class="right_content_container">
+        <div class="list_content_container">
+          <div class="list_container">
+            <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){ if(i> length){
+              i++;
+              }else{
+              var oneItem = rows[i];
+              %>
+              <a href="product/<%=oneItem.p_id%>" class="product_container">
+                <img class="product_img" src="/product/<%=oneItem.p_img%>">
+                <div class="product_info">
+                  <div class="brand">
+                    <%=oneItem.p_brand%>
+                  </div>
+                  <div class="name">
+                    <%=oneItem.p_name%>
+                  </div>
+                  <div class="price_container">
+                    <div class="price">
+                      <%=oneItem.p_price%>
+                    </div>
+                    <h3>원</h3>
+                  </div>
+                </div>
+              </a>
+              <% } } %>
+          </div>
+          <div class="pagenum_container">
+            <% for(var j=0; j < rows.length / page_num; j++){ %>
+              <a href="/fragrance/list/<%= j + 1 %>">
+                <div class="pagenum_selected">
+                  <%= j + 1 %>
+                </div>
+              </a>
+              <% } %>
+          </div>
+        </div>
+        <div class="rv_container">
+          <h2>최근 본 상품</h2>
+          <a href="/fragrance/list/product/1"><div class="rv_product"><img class="rv_image" src="/product/1.png"></div></a>
+          <a href="/fragrance/list/product/2"><div class="rv_product"><img class="rv_image" src="/product/4.png"></div></a>
+          <a href="/fragrance/list/product/3"><div class="rv_product"><img class="rv_image" src="/product/5.png"></div></a>
+          <a href="/fragrance/list/product/4"><div class="rv_product"><img class="rv_image" src="/product/8.png"></div></a>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>

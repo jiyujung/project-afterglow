@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="/css/header.css" type="text/css" />
+  <link rel="stylesheet" href="/css/product.css" type="text/css" />
+  <title>여향 | Product</title>
+</head>
+
+<body>
+  <header>
+    <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"></a>
+    <nav>
+      <ul class="nav_links">
+        <li>
+          <a href="/recommend">추천</a>
+        </li>
+        <li>
+          <a href="/fragrance">프레그런스</a>
+        </li>
+        <li>
+          <a href="/bathandbody">배스 앤 바디</a>
+        </li>
+        <li>
+          <a href="/homefragrance">홈 프레그런스</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="cta_area">
+      <li>
+        <a class="cta_mypage" href="/mypage"><img src="/img/mypage.svg"></a>
+      </li>
+    </ul>
+  </header>
+  <section>
+    <article class="similar_container">
+      <label class="similar_label">비슷한 제품</label>
+      <a href="/fragrance/list/product/1"><div class="product"><img class="rv_image" src="/product/1.png"></div></a>
+      <a href="/fragrance/list/product/2"><div class="product"><img class="rv_image" src="/product/4.png"></div></a>
+      <a href="/fragrance/list/product/3"><div class="product"><img class="rv_image" src="/product/5.png"></div></a>
+      <a href="/fragrance/list/product/4"><div class="product"><img class="rv_image" src="/product/8.png"></div></a>
+      <a class="similar_more"><img src="/img/under_arrow.svg"></a>
+    </article>
+    <article class="right_container">
+      <div class="product_container">
+        <div class="image_container">
+          <img class="product_img" src="/product/<%= row.p_img %>">
+        </div>
+        <div class="info_container">
+          <h2>
+            <%= row.p_brand %>
+          </h2>
+          <h1>
+            <%= row.p_name %>
+          </h1>
+          <div class="dilution_container">
+            <% if(row.p_abrate <=5) { %>
+              <h3>부향률</h3>
+              <img class="question_mark" src="/img/question_mark.svg">
+              <% for(var i=0; i < row.p_abrate; i++){ %>
+                <img class="dilution" src="/img/dilution_fill.svg">
+                <% } %>
+                  <% for(var i=0; i < 5-row.p_abrate; i++){ %>
+                    <img class="dilution" src="/img/dilution_blank.svg">
+                    <% } %>
+                      <% } %>
+          </div>
+          <div class="explain">
+            <%= row.p_detail %>
+          </div>
+          <div class="vp_container">
+            <div class="volume">
+              <div class="volume_selected">
+                <%= row.p_capacity %>ml
+              </div>
+            </div>
+            <div class="price_container">
+              <div class="price">
+                <%= row.p_price %>
+              </div>
+              <label class="won">원</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btm_container">
+        <div class="rate_container">
+          <h3>별점</h3>
+          <div class="rate">
+            <img class="rate_fill" src="/img/rate_fill.svg">
+            <img class="rate_fill" src="/img/rate_fill.svg">
+            <img class="rate_fill" src="/img/rate_fill.svg">
+            <img class="rate_blank" src="/img/rate_blank.svg">
+            <img class="rate_blank" src="/img/rate_blank.svg">
+          </div>
+        </div>
+        <div class="review_container">
+          <h3>후기</h3>
+          <div class="review_first">
+            최고의 향수 추천합니다! 제가 맡은 향 중 제일 향기로웠습니다 최고입니다.
+          </div>
+          <div class="viewmore_btn">
+            더보기 >
+          </div>
+        </div>
+        <div class="btm_right_container">
+          <div class="favorite_btn">
+            <img src="/img/favorite_blank.svg">
+            <h4>찜하기</h4>
+          </div>
+          <a href="<%= row.p_link %>">
+            <div class="page_move">
+              <h5>구매 페이지로 이동</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </article>
+  </section>
+</body>
+
+</html>

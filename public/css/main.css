@@ -1,0 +1,69 @@
+body {
+  width: 1920px;
+  height: 1080px;
+}
+
+video {
+  z-index: 10;
+  width: 1920px;
+  height: 720px;
+}
+
+section:before {
+  content: '';
+  position: absolute;
+  left: 460px;
+  width: 1100px;
+  height: 720px;
+  background: linear-gradient(to right, #316115, #b4e698, #f19cb3, #b1143f);
+  opacity: 100%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.sample_1 {
+  position: absolute;
+  z-index: 100;
+  top: 160px;
+  left: 834px;
+}
+
+header {
+  border-style: none !important;
+  background-color: white;
+}
+
+.btm_container{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  width: 1920px;
+  margin-top: 38px;
+  margin-left: 92px;
+}
+
+.left_circle{
+  margin-right: 46px;
+}
+
+.right_circle{
+  margin-left: 46px;
+}
+
+.today_perfume{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #434343;
+  margin-left: 22.5px;
+  margin-right: 22.5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #434343;
+  border-radius: 16px;
+  color: #434343;
+}
