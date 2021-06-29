@@ -1,9 +1,8 @@
-// MySQl 로드
-var mysql = require('mysql');
+const mysql = require('mysql');
 const { connect } = require('./main');
-var pool = mysql.createPool(
+const pool = mysql.createPool(
   {
-    connectionLimit:3,
+    connectionLimit: 3,
     host: "localhost",
     user: "root",
     password: "mysql",
@@ -11,4 +10,4 @@ var pool = mysql.createPool(
     database: "afterglow"
   });
 
-module.exports=pool;
+module.exports = pool;
