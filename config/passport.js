@@ -1,21 +1,8 @@
-var passport = require('passport');
-var GoogleStrategy = require('passport-google-oauth2').Strategy;
-var FacebookStrategy = require('passport-facebook').Strategy;
-require('dotenv').config(); 
-var mysql = require('mysql');
-var mysqlconnection = mysql.createConnection(
-  {
-    host: "localhost",
-    user: "root",
-    password: "mysql",
-    port: 3306,
-    database: "afterglow"
-  });
-mysqlconnection.connect(function (err) {
-  if (err) {
-    console.log(err);
-  }
-});
+const passport = require('passport');
+const pool = require('../routes/db.js');
+const GoogleStrategy = require('passport-google-oauth2').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
+require('dotenv').config();
 
 passport.serializeUser(function (user, done) {
   done(null, user);
@@ -32,19 +19,20 @@ passport.use(new GoogleStrategy(
     passReqToCallback: true
   }, function (request, accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
-      //Checking for user exists or not using profile.id
-      mysqlconnection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
-        if (err) throw err;
-        if (rows.length === 0) {
-          mysqlconnection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'google' + "')");
-        }
-        else {
-          console.log("User already exists in database");
-        }
-      });
-      return done(null, profile);
+      pool.getConnection(function (err, connection) {
+        connection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
+          if (err) throw err;
+          if (rows.length === 0) {
+            connection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'google' + "')");
+          } else {
+            console.log("User already exists in database");
+          }
+          connection.release;
+        });
+        return done(null, profile);
     });
-  }));
+  });
+}));
 
 passport.use(new FacebookStrategy(
   {
@@ -54,18 +42,20 @@ passport.use(new FacebookStrategy(
     passReqToCallback: true
   }, function (request, accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
-      //Checking whether user exists or not using profile.id
-      mysqlconnection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
+      pool.getConnection(function (err, connection) {
+        connection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
         if (err) throw err;
         if (rows.length === 0) {
-          mysqlconnection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'facebook' + "')");
+          connection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'facebook' + "')");
         }
         else {
           console.log("User already exists in database");
         }
+        connection.release;
       });
       return done(null, profile);
     });
-  }));
+  });
+}));
 
 module.exports = passport;
