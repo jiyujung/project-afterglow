@@ -1,4 +1,5 @@
 const express = require('express');
+const app = express();
 const router = express.Router();
 const pool = require('./db.js');
 const url = require('url');
@@ -137,6 +138,14 @@ router.get('/list/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
+      if(row[0] !== undefined){
+        req.session.uid = row[0].p_id;
+        req.session.save(
+          function(err){
+            console.log(err);
+          }
+        );
+      }
       res.render('product', {row:row[0]});
       connection.release();
     });

@@ -4,12 +4,30 @@ const path = require('path')
 const passport  = require('passport');
 const session   = require('express-session');
 const bodyParser = require("body-parser");
+const MySQLStore = require('express-mysql-session')(session);
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(session({secret: 'asadlfkj!@#!@#dfgasdg', resave: false, saveUninitialized:true}));
 
-// Passport setting
+const options = {
+  host: 'localhost',
+  port: 3306,
+  user: 'root',
+  password: 'mysql',
+  database: 'afterglow'
+};
+
+const sessionStore = new MySQLStore(options);
+
+app.use(session({
+  key: 'session_cookie_name',
+  secret: 'session_cookie_secret',
+  store: sessionStore,
+  resave: false,
+  saveUninitialized: false
+}));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
