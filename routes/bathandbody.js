@@ -17,7 +17,7 @@ router.get('/list/:page', function(req, res, next) {
 
             res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
             console.log(rows.length-1);
-            connection.release;
+            connection.release();
         })
     })
 })
@@ -35,7 +35,7 @@ router.get('/list/search/:page',function(req,res,next) {
       console.log("rows:" + search);
 
       res.render('fragrance', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
-      connection.release;
+      connection.release();
 
     });
   })
@@ -48,7 +48,7 @@ router.get('/list/search/product/:p_id',function(req,res,next) {
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
       res.render('product', {row:row[0]});
-      connection.release;
+      connection.release();
     });
   })
 });
@@ -61,7 +61,7 @@ router.get('/list/recent/:page',function(req,res,next) {
       if(err) console.error(err);
 
       res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
-      connection.release;
+      connection.release();
 
     });
   })
@@ -74,7 +74,7 @@ router.get('/list/recent/product/:p_id',function(req,res,next) {
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
       res.render('product', {row:row[0]});
-      connection.release;
+      connection.release();
     });
   })
 });
@@ -87,7 +87,7 @@ router.get('/list/high/:page',function(req,res,next) {
       if(err) console.error(err);
 
       res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
-      connection.release;
+      connection.release();
 
     });
   })
@@ -100,7 +100,7 @@ router.get('/list/high/product/:p_id',function(req,res,next) {
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
       res.render('product', {row:row[0]});
-      connection.release;
+      connection.release();
     });
   })
 });
@@ -113,7 +113,7 @@ router.get('/list/low/:page',function(req,res,next) {
       if(err) console.error(err);
 
       res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
-      connection.release;
+      connection.release();
 
     });
   })
@@ -126,7 +126,7 @@ router.get('/list/low/product/:p_id',function(req,res,next) {
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
       res.render('product', {row:row[0]});
-      connection.release;
+      connection.release();
     });
   })
 });
@@ -138,7 +138,7 @@ router.get('/list/product/:p_id',function(req,res,next) {
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
       res.render('product', {row:row[0]});
-      connection.release;
+      connection.release();
     });
   })
 });
