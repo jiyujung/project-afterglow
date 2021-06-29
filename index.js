@@ -26,7 +26,7 @@ app.use('/bathandbody', require('./routes/bathandbody'));
 app.use('/homefragrance', require('./routes/homefragrance'));
 
 // Port setting
-const port = 3000;
+const port = 3001;
 app.listen(port, function(){
   console.log(`server on! http://localhost:${port}`);
 });
