@@ -6,13 +6,14 @@ var mysql = require('mysql');
 var mysqlconnection = mysql.createConnection(
   {
     host: "localhost",
-    user: "afterglow",
-    password: "AOVImSs9WIoCF4yL",
+    user: "root",
+    password: "mysql",
+    port: 3306,
     database: "afterglow"
   });
 mysqlconnection.connect(function (err) {
   if (err) {
-    console.log('not connected');
+    console.log(err);
   }
 });
 
