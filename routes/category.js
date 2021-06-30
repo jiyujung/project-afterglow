@@ -3,10 +3,6 @@ const router = express.Router();
 const pool = require('./db.js');
 const url = require('url');
 
-router.get('/', function (req, res, next) {
-    res.redirect('/fragrance');
-});
-
 router.get('/fragrance', function (req, res, next) {
     const q = req.query.q;
     const page = req.query.page;
