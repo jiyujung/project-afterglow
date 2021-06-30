@@ -13,4 +13,8 @@ router.get('/mypage', function(req,res){
   res.render('mypage.ejs', {user: req.user});
 });
 
+router.get('/review', function(req,res){
+  res.render('review.ejs', {user: req.user});
+});
+
 module.exports = router;
