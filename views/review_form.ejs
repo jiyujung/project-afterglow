@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link rel="stylesheet" href="css/review_form.css" type="text/css" />
+    <title>여향 | 후기 작성</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img class="logo" src="img/logo.svg" alt="logo"></a>
+        <nav>
+            <ul class="nav_links">
+                <li>
+                    <a href="recommend">추천</a>
+                </li>
+                <li>
+                    <a href="fragrance">프레그런스</a>
+                </li>
+                <li>
+                    <a href="bathandbody">배스 앤 바디</a>
+                </li>
+                <li>
+                    <a href="homefragrance">홈 프레그런스</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="cta_area">
+            <li>
+                <a class="cta_mypage" href="mypage"><img src="img/mypage.svg"></a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <div class="top_container">
+            <a class="back_btn" href="javascript:history.back();"><img src="img/back_btn.svg"></a>
+            <h1>후기 작성</h1>
+        </div>
+        <div class="product_name">[알케미스트 가든] Fading Autumn, Woods</div>
+        <form>
+            <div class="form_content">
+                <h2>별점</h2>
+                <div class="rating">
+                    <div class="rating_star blank"></div>
+                    <div class="rating_star blank"></div>
+                    <div class="rating_star blank"></div>
+                    <div class="rating_star blank"></div>
+                    <div class="rating_star blank"></div>
+                </div>
+            </div>
+            <div class="form_content">
+                <h2>제목</h2>
+                <input type="text" placeholder="30자 이내로 입력해주세요.">
+            </div>
+            <div class="form_content area">
+                <h3>후기</h3>
+                <textarea type="text" size="300" class="review_content_input" placeholder="500자 이내로 입력해주세요."></textarea>
+            </div>
+            <input type="submit" class="submit_review_btn" value="후기 등록">
+        </form>
+    </section>
+    <script defer type="text/javascript" src="js/rating.js"></script>
+</body>
+
+</html>

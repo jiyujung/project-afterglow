@@ -42,6 +42,7 @@ app.use('/auth', require('./routes/auth'));
 app.use('/fragrance', require('./routes/fragrance'));
 app.use('/bathandbody', require('./routes/bathandbody'));
 app.use('/homefragrance', require('./routes/homefragrance'));
+app.use('/review', require('./routes/review'));
 
 // Port setting
 const port = 3001;
