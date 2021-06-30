@@ -23,7 +23,7 @@ app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 // app.use('/user', require('./routes/user'));
 app.use('/category', require('./routes/category'));
-// app.use('/products', require('./routes/products'));
+app.use('/products', require('./routes/products'));
 
 // Port setting
 const port = 3000;
