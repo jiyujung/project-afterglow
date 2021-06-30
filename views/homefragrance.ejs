@@ -157,38 +157,10 @@
       <div class="right_content_container">
         <div class="list_content_container">
           <div class="list_container">
-            <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){ if(i> length){
-              i++;
-              }else{
-              var oneItem = rows[i]
-              %>
-              <a href="product/<%=oneItem.p_id%>" class="product_container">
-                <img class="product_img" src="/product/<%=oneItem.p_img%>">
-                <div class="product_info">
-                  <div class="brand">
-                    <%=oneItem.p_brand%>
-                  </div>
-                  <div class="name">
-                    <%=oneItem.p_name%>
-                  </div>
-                  <div class="price_container">
-                    <div class="price">
-                      <%=oneItem.p_price%>
-                    </div>
-                    <h3>원</h3>
-                  </div>
-                </div>
-              </a>
-              <% } } %>
+              
           </div>
           <div class="pagenum_container">
-            <% for(var j=0; j < rows.length / page_num; j++){ %>
-              <a href="/homefragrance/list/<%= j + 1 %>">
-                <div class="pagenum_selected">
-                  <%= j + 1 %>
-                </div>
-              </a>
-              <% } %>
+            
           </div>
         </div>
         <div class="rv_container">

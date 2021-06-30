@@ -183,7 +183,7 @@
           </div>
           <div class="pagenum_container">
             <% for(var j=0; j < rows.length / page_num; j++){ %>
-              <a href="/fragrance/list/<%= j + 1 %>">
+              <a href="/category/fragrance?q=<%= q %>&page=<%= j + 1 %>&sorter=latest-asc">
                 <div class="pagenum_selected">
                   <%= j + 1 %>
                 </div>
