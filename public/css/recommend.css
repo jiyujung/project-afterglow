@@ -2,7 +2,6 @@ body {
   width: 1920px;
   height: 1080px;
   background-color: #f8f8f3;
-  overflow: hidden;
 }
 
 section {
@@ -281,7 +280,6 @@ h6 {
   flex-direction: column;
   height: 400px;
   background-image: url("../img/banner_mini.png");
-  cursor: pointer;
 }
 
 .btm_container {
