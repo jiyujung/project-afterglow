@@ -18,12 +18,13 @@ passport.use(new GoogleStrategy(
     callbackURL: '/auth/google/callback',
     passReqToCallback: true
   }, function (request, accessToken, refreshToken, profile, done) {
+    console.log(profile);
     process.nextTick(function () {
       pool.getConnection(function (err, connection) {
         connection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
           if (err) throw err;
           if (rows.length === 0) {
-            connection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'google' + "')");
+            connection.query("INSERT into member(user_id,user_name,user_group,user_img) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'google' +  "','" + profile.picture + "')");
           } else {
             console.log("User already exists in database");
           }
@@ -36,17 +37,21 @@ passport.use(new GoogleStrategy(
 
 passport.use(new FacebookStrategy(
   {
-    clientID: "211100520685336",
-    clientSecret: "abb849349995ca0ee83655c2c4383a67",
+    clientID: "966046294128930",
+    clientSecret: "6e414403239381579262f732a7f84db3",
     callbackURL: '/auth/facebook/callback',
+    scope: ['public_profile', 'picture'],
+    profileFields: ['id', 'displayName'],
     passReqToCallback: true
-  }, function (request, accessToken, refreshToken, profile, done) {
+  }, function (request, response, accessToken, refreshToken, profile, done) {
+    console.log(profile);
+    profile.picture = 'https://graph.facebook.com/v2.4/' + profile.id + '/picture?type=large';
     process.nextTick(function () {
       pool.getConnection(function (err, connection) {
         connection.query("SELECT * from member where user_id=" + profile.id, function (err, rows, fields) {
         if (err) throw err;
         if (rows.length === 0) {
-          connection.query("INSERT into member(user_id,user_name,user_group) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'facebook' + "')");
+          connection.query("INSERT into member(user_id,user_name,user_group,user_img) VALUES('" + profile.id + "','" + profile.displayName + "','" + 'facebook' +  "','" + profile.picture + "')");
         }
         else {
           console.log("User already exists in database");

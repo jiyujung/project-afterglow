@@ -15,7 +15,7 @@ router.get('/list/:page', function(req, res, next) {
             if(err) console.error("err: " + err);
             console.log("rows:" + JSON.stringify(rows));
 
-            res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
+            res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true, user: req.user});
             console.log(rows.length-1);
             connection.release();
         })
@@ -34,7 +34,7 @@ router.get('/list/search/:page',function(req,res,next) {
 
       console.log("rows:" + search);
 
-      res.render('fragrance', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
+      res.render('fragrance', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true, user: req.user});
       connection.release();
 
     });
@@ -47,7 +47,7 @@ router.get('/list/search/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
-      res.render('product', {row:row[0]});
+      res.render('product', {row:row[0], user: req.user});
       connection.release();
     });
   })
@@ -60,7 +60,7 @@ router.get('/list/recent/:page',function(req,res,next) {
     connection.query(sql, function(err,rows) {
       if(err) console.error(err);
 
-      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
+      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true, user: req.user});
       connection.release();
 
     });
@@ -73,7 +73,7 @@ router.get('/list/recent/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
-      res.render('product', {row:row[0]});
+      res.render('product', {row:row[0], user: req.user});
       connection.release();
     });
   })
@@ -86,7 +86,7 @@ router.get('/list/high/:page',function(req,res,next) {
     connection.query(sql, function(err,rows) {
       if(err) console.error(err);
 
-      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
+      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true, user: req.user});
       connection.release();
 
     });
@@ -99,7 +99,7 @@ router.get('/list/high/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
-      res.render('product', {row:row[0]});
+      res.render('product', {row:row[0], user: req.user});
       connection.release();
     });
   })
@@ -112,7 +112,7 @@ router.get('/list/low/:page',function(req,res,next) {
     connection.query(sql, function(err,rows) {
       if(err) console.error(err);
 
-      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true});
+      res.render('bathandbody', {rows:rows, page:page, length:rows.length-1, page_num:12, pass:true, user: req.user});
       connection.release();
 
     });
@@ -125,7 +125,7 @@ router.get('/list/low/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
-      res.render('product', {row:row[0]});
+      res.render('product', {row:row[0], user: req.user});
       connection.release();
     });
   })
@@ -137,7 +137,7 @@ router.get('/list/product/:p_id',function(req,res,next) {
     const sql = "SELECT * FROM product WHERE p_id=?";
     connection.query(sql, [p_id], function(err,row) {
       if(err) console.error(err);
-      res.render('product', {row:row[0]});
+      res.render('product', {row:row[0], user: req.user});
       connection.release();
     });
   })
