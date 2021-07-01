@@ -367,7 +367,7 @@ textarea:focus {
     margin-top: 7px;
 }
 
-.mag_content{
+.mag_content {
     display: flex;
     flex-direction: row;
     margin-top: 30px;

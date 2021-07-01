@@ -1,0 +1,86 @@
+body {
+    width: 1920px;
+    height: 1080px;
+    background-color: #f8f8f3;
+}
+
+h2{
+    color: #434343;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.top_container{
+    display: flex;
+    width: 1920px;
+    height: 410px;
+    flex-direction: row;
+    border-bottom: solid #434343 1px;
+}
+
+.profile_container{
+    display: flex;
+    width: 388px;
+    height: 410px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        border-right: solid #434343 1px;
+}
+
+.profile_picture{
+    width: 148px;
+    height: 148px;
+    border: solid #434343 1px;
+    border-radius: 100px;
+    margin-top: 72px;
+}
+
+.nickname_area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nickname{
+    color: #434343;
+    font-size: 40px;
+    margin-right: 6px;
+}
+
+.logout{
+    color: #434343;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 40px;
+    align-self: flex-end;
+}
+
+.wishlist_container{
+
+}
+
+.wishlist_left_btn{
+
+}
+
+.wishlist_content{
+
+}
+
+.wishlist_right_btn{
+
+}
+
+.bottom_container{
+
+}
+
+.my_review_container{
+
+}
+
+.my_recommand_container{
+
+}

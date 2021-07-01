@@ -33,7 +33,7 @@
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
         <% } else { %>
-          <a class="cta_mypage" href="/mypage"><img src="<%= user.picture %>"></a>
+          <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture %>"></a>
         <% } %>
       </li>
     </ul>
@@ -147,7 +147,6 @@
         <div class="category_text">프레그런스 ></div>
         <div class="align_menu">
           <div class="align_btn"><a href="/category/fragrance?q=&page=1&sorter=latest-asc">최신순</a></div>
-          <div class="align_btn"><a href="/category/fragrance?q=&page=1&sorter=latest-asc">인기순</a></div>
           <div class="align_btn"><a href="/category/fragrance?q=&page=1&sorter=price-asc">낮은가격순</a></div>
           <div class="align_btn"><a href="/category/fragrance?q=&page=1&sorter=price-desc">높은가격순</a></div>
         </div>

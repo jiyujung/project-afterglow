@@ -33,7 +33,7 @@
                 <% if(!user){ %>
                     <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
                 <% } else { %>
-                    <a class="cta_mypage" href="/mypage"><img src="<%= user.picture %>"></a>
+                    <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture %>"></a>
                 <% } %>
             </li>
         </ul>
@@ -155,28 +155,29 @@
             <div class="right_content_container">
                 <div class="list_content_container">
                     <div class="list_container">
-                        <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){ if(i> length){
-                            i++;
-                        }else{
-                            var oneItem = rows[i];
-                        %>
-                        <a href="/products/<%=oneItem.p_id%>" class="product_container">
-                            <img class="product_img" src="/product/<%=oneItem.p_img%>">
-                            <div class="product_info">
-                                <div class="brand">
-                                    <%=oneItem.p_brand%>
-                                </div>
-                                <div class="name">
-                                    <%=oneItem.p_name%>
-                                </div>
-                                <div class="price_container">
-                                    <div class="price">
-                                        <%=oneItem.p_price%>
+                        <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){
+                            if(i> length){
+                                i++;
+                            }else{
+                                var oneItem = rows[i];
+                            %>
+                            <a href="/products/<%=oneItem.p_id%>" class="product_container">
+                                <img class="product_img" src="/product/<%=oneItem.p_img%>">
+                                <div class="product_info">
+                                    <div class="brand">
+                                        <%=oneItem.p_brand%>
                                     </div>
-                                    <h3>원</h3>
+                                    <div class="name">
+                                        <%=oneItem.p_name%>
+                                    </div>
+                                    <div class="price_container">
+                                        <div class="price">
+                                            <%=oneItem.p_price%>
+                                        </div>
+                                        <h3>원</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                         <% } } %>
                     </div>
                     <div class="pagenum_container">
@@ -186,7 +187,7 @@
                                     <%= j + 1 %>
                                 </div>
                             </a>
-                        <% } %>
+                            <% } %>
                     </div>
                 </div>
                 <div class="rv_container">

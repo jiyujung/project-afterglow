@@ -34,7 +34,7 @@
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
         <% } else { %>
-          <a class="cta_mypage" href="/mypage"><img src="<%= user.picture%>"></a>
+          <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
         <% } %>
       </li>
     </ul>
