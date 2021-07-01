@@ -32,11 +32,11 @@
       <li>
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-        <% } else { %>
-          <!-- <p>Welcome <%= user.displayName %></p> -->
-          <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
-          <a class="cta_mypage" href="/mypage"><img src="<%= user.picture%>"></a>
-        <% } %>
+          <% } else { %>
+            <!-- <p>Welcome <%= user.displayName %></p> -->
+            <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
+            <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
+            <% } %>
       </li>
     </ul>
   </header>
@@ -157,17 +157,23 @@
       <div class="right_content_container">
         <div class="list_content_container">
           <div class="list_container">
-              
+
           </div>
           <div class="pagenum_container">
-            
+
           </div>
         </div>
         <div class="rv_container">
           <h2>최근 본 상품</h2>
-          <a href="/homefragrance/list/product/99"><div class="rv_product"><img class="rv_image" src="/product/165.png"></div></a>
-          <a href="/homefragrance/list/product/100"><div class="rv_product"><img class="rv_image" src="/product/166.png"></div></a>
-          <a href="/homefragrance/list/product/101"><div class="rv_product"><img class="rv_image" src="/product/167.png"></div></a>
+          <a href="/homefragrance/list/product/99">
+            <div class="rv_product"><img class="rv_image" src="/product/165.png"></div>
+          </a>
+          <a href="/homefragrance/list/product/100">
+            <div class="rv_product"><img class="rv_image" src="/product/166.png"></div>
+          </a>
+          <a href="/homefragrance/list/product/101">
+            <div class="rv_product"><img class="rv_image" src="/product/167.png"></div>
+          </a>
           <div class="rv_product"></div>
         </div>
       </div>

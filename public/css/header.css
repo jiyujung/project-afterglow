@@ -59,3 +59,10 @@ button {
   cursor: pointer;
   color: white;
 }
+
+.user_picture{
+  margin-top: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 100px;
+}
