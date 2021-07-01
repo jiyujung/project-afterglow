@@ -32,11 +32,9 @@
             <li>
                 <% if(!user){ %>
                     <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-                    <% } else { %>
-                        <!-- <p>Welcome <%= user.displayName %></p> -->
-                        <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
-                        <a class="cta_mypage" href="/mypage"><img src="<%= user.picture%>"></a>
-                        <% } %>
+                <% } else { %>
+                    <a class="cta_mypage" href="/mypage"><img src="<%= user.picture %>"></a>
+                <% } %>
             </li>
         </ul>
     </header>
@@ -148,10 +146,10 @@
             <div class="right_nav_container">
                 <div class="category_text">배스 앤 바디 ></div>
                 <div class="align_menu">
-                    <div class="align_btn"><a href="/bathandbody/list/recent/1">최신순</a></div>
-                    <div class="align_btn"><a href="/bathandbody/list/1">인기순</a></div>
-                    <div class="align_btn"><a href="/bathandbody/list/low/1">낮은가격순</a></div>
-                    <div class="align_btn"><a href="/bathandbody/list/high/1">높은가격순</a></div>
+                    <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=latest-asc">최신순</a></div>
+                    <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=latest-asc">인기순</a></div>
+                    <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=price-asc">낮은가격순</a></div>
+                    <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=price-desc">높은가격순</a></div>
                 </div>
             </div>
             <div class="right_content_container">
@@ -162,7 +160,7 @@
                         }else{
                             var oneItem = rows[i];
                         %>
-                        <a href="product/<%=oneItem.p_id%>" class="product_container">
+                        <a href="/products/<%=oneItem.p_id%>" class="product_container">
                             <img class="product_img" src="/product/<%=oneItem.p_img%>">
                             <div class="product_info">
                                 <div class="brand">
@@ -183,7 +181,7 @@
                     </div>
                     <div class="pagenum_container">
                         <% for(var j=0; j < rows.length / page_num; j++){ %>
-                            <a href="/category/bath-and-body?q=<%= q %>&page=<%= j + 1 %>&sorter=latest-asc">
+                            <a href="/category/bath-and-body?q=<%= q %>&page=<%= j + 1 %>&sorter=<%= sorter %>">
                                 <div class="pagenum_selected">
                                     <%= j + 1 %>
                                 </div>
@@ -193,10 +191,10 @@
                 </div>
                 <div class="rv_container">
                     <h2>최근 본 상품</h2>
-                    <a href="/fragrance/list/product/97">
+                    <a href="/products/97">
                         <div class="rv_product"><img class="rv_image" src="/product/163.png"></div>
                     </a>
-                    <a href="/fragrance/list/product/98">
+                    <a href="/products/98">
                         <div class="rv_product"><img class="rv_image" src="/product/164.png"></div>
                     </a>
                     <div class="rv_product"></div>

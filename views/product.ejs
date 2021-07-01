@@ -33,8 +33,6 @@
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
         <% } else { %>
-          <!-- <p>Welcome <%= user.displayName %></p> -->
-          <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
           <a class="cta_mypage" href="/mypage"><img src="<%= user.picture%>"></a>
         <% } %>
       </li>
@@ -43,16 +41,16 @@
   <section>
     <article class="similar_container">
       <label class="similar_label">비슷한 제품</label>
-      <a href="/fragrance/list/product/1">
+      <a href="/products/1">
         <div class="product"><img class="rv_image" src="/product/1.png"></div>
       </a>
-      <a href="/fragrance/list/product/2">
+      <a href="/products/2">
         <div class="product"><img class="rv_image" src="/product/4.png"></div>
       </a>
-      <a href="/fragrance/list/product/3">
+      <a href="/products/3">
         <div class="product"><img class="rv_image" src="/product/5.png"></div>
       </a>
-      <a href="/fragrance/list/product/4">
+      <a href="/products/4">
         <div class="product"><img class="rv_image" src="/product/8.png"></div>
       </a>
       <a class="similar_more"><img src="/img/under_arrow.svg"></a>
@@ -75,11 +73,11 @@
               <img class="question_mark" src="/img/question_mark.svg">
               <% for(var i=0; i < row.p_abrate; i++){ %>
                 <img class="dilution" src="/img/dilution_fill.svg">
-                <% } %>
-                  <% for(var i=0; i < 5-row.p_abrate; i++){ %>
-                    <img class="dilution" src="/img/dilution_blank.svg">
-                    <% } %>
-                      <% } %>
+              <% } %>
+              <% for(var i=0; i < 5-row.p_abrate; i++){ %>
+                <img class="dilution" src="/img/dilution_blank.svg">
+              <% } %>
+            <% } %>
           </div>
           <div class="explain">
             <%= row.p_detail %>
