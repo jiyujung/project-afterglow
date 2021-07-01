@@ -7,9 +7,14 @@
   <link rel="stylesheet" href="/css/header.css" type="text/css" />
   <link rel="stylesheet" href="/css/product.css" type="text/css" />
   <title>여향 | Product</title>
+  <script>
+    window.onload = function () {
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
 </head>
-
 <body>
+  <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
   <header>
     <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"></a>
     <nav>

@@ -326,7 +326,7 @@ h6 {
   border-color: #434343;
 }
 
-.recommend_content {
+#slider {
   display: flex;
   width: 1736px;
   flex-direction: row;
@@ -355,7 +355,7 @@ h6 {
   cursor: pointer;
 }
 
-.recommend {
+.item {
   display: flex;
   width: 700px;
   height: 370px;

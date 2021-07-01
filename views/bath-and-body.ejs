@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="/css/header.css" type="text/css" />
     <link rel="stylesheet" href="/css/fragrance.css" type="text/css" />
     <title>여향 | 배스 앤 바디</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("loading").style.display = "none";
+        }
+    </script>
 </head>
 
 <body>
+    <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
     <header>
         <a href="/"><img class="logo" src="/img/logo.svg" alt="logo"></a>
         <nav>
@@ -31,12 +37,12 @@
         <ul class="cta_area">
             <li>
                 <% if(!user){ %>
-                    <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-                    <% } else { %>
-                        <!-- <p>Welcome <%= user.displayName %></p> -->
-                        <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
-                        <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
-                        <% } %>
+                <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
+                <% } else { %>
+                <!-- <p>Welcome <%= user.displayName %></p> -->
+                <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
+                <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
+                <% } %>
             </li>
         </ul>
     </header>
@@ -161,33 +167,33 @@
                             }else{
                             var oneItem = rows[i];
                             %>
-                            <a href="product/<%=oneItem.p_id%>" class="product_container">
-                                <img class="product_img" src="/product/<%=oneItem.p_img%>">
-                                <div class="product_info">
-                                    <div class="brand">
-                                        <%=oneItem.p_brand%>
-                                    </div>
-                                    <div class="name">
-                                        <%=oneItem.p_name%>
-                                    </div>
-                                    <div class="price_container">
-                                        <div class="price">
-                                            <%=oneItem.p_price%>
-                                        </div>
-                                        <h3>원</h3>
-                                    </div>
+                        <a href="product/<%=oneItem.p_id%>" class="product_container">
+                            <img class="product_img" src="/product/<%=oneItem.p_img%>">
+                            <div class="product_info">
+                                <div class="brand">
+                                    <%=oneItem.p_brand%>
                                 </div>
-                            </a>
-                            <% } } %>
+                                <div class="name">
+                                    <%=oneItem.p_name%>
+                                </div>
+                                <div class="price_container">
+                                    <div class="price">
+                                        <%=oneItem.p_price%>
+                                    </div>
+                                    <h3>원</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <% } } %>
                     </div>
                     <div class="pagenum_container">
                         <% for(var j=0; j < rows.length / page_num; j++){ %>
-                            <a href="/category/bath-and-body?q=<%= q %>&page=<%= j + 1 %>&sorter=latest-asc">
-                                <div class="pagenum_selected">
-                                    <%= j + 1 %>
-                                </div>
-                            </a>
-                            <% } %>
+                        <a href="/category/bath-and-body?q=<%= q %>&page=<%= j + 1 %>&sorter=latest-asc">
+                            <div class="pagenum_selected">
+                                <%= j + 1 %>
+                            </div>
+                        </a>
+                        <% } %>
                     </div>
                 </div>
                 <div class="rv_container">
