@@ -30,7 +30,13 @@
         </nav>
         <ul class="cta_area">
             <li>
-                <a class="cta_mypage" href="mypage"><img src="img/mypage.svg"></a>
+                <% if(!user){ %>
+                    <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
+                <% } else { %>
+                    <!-- <p>Welcome <%= user.displayName %></p> -->
+                    <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
+                    <a class="cta_mypage" href="mypage"><img src="<%= user.picture%>"></a>
+                <% } %>
             </li>
         </ul>
     </header>
