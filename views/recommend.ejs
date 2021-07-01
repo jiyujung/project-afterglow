@@ -8,9 +8,14 @@
   <link rel="stylesheet" href="css/recommend.css" type="text/css" />
   <link rel="stylesheet" href="css/modal.css" type="text/css" />
   <title>여향 | Recommend</title>
+  <script>
+    window.onload = function () {
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
 </head>
-
 <body>
+  <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
   <header>
     <a href="/"><img class="logo" src="img/logo.svg" alt="logo"></a>
     <nav>
@@ -176,11 +181,11 @@
       </div>
       <div class="recommend_container">
         <div class="recommend_content_container">
-          <div class="recommend_left_btn">
+          <div class="recommend_left_btn" onclick="slider.prev()">
             <img src="img/left_arrow.svg">
           </div>
-          <div class="recommend_content">
-            <div class="recommend">
+          <div id="slider">
+            <div class="item">
               <div class="recommend_nickname_area">
                 <div class="recommend_nickname">인생의 수레바퀴</div>
                 <h7>님</h7>
@@ -191,7 +196,18 @@
               <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
                 추천해주세요!</div>
             </div>
-            <div class="recommend">
+            <div class="item">
+              <div class="recommend_nickname_area">
+                <div class="recommend_nickname">인생의 수레바퀴</div>
+                <h7>님</h7>
+              </div>
+              <div class="recommend_products_area">
+              </div>
+              <div class="recommend_title">바다에 놀러갈 때 사용할 향수 추천</div>
+              <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
+                추천해주세요!</div>
+            </div>
+            <div class="item">
               <div class="recommend_nickname_area">
                 <div class="recommend_nickname">인생의 수레바퀴</div>
                 <h7>님</h7>
@@ -203,7 +219,7 @@
                 추천해주세요!</div>
             </div>
           </div>
-          <div class="recommend_right_btn">
+          <div class="recommend_right_btn" onclick="slider.next()">
             <img src="img/right_arrow.svg">
           </div>
         </div>
@@ -213,97 +229,6 @@
       </div>
     </div>
   </section>
-  <div id="modal" class="modal_overlay">
-    <div class="modal_window">
-      <div class="modal_upper">
-        <div class="modal_left">
-          <div class="modal_title">
-            이럴 땐 이런 향수
-          </div>
-          <div class="modal_explain">
-            나의 상황과 생각, 감정에 알맞는 향수를 찾으세요?<br>
-            여향 회원들에게 추천 받아보세요!
-          </div>
-        </div>
-        <div class="modal_right">
-          <div class="close_area"><img src="img/x_btn.svg"></div>
-          <div class="modal_recommend_btn_area">
-            <div id="btn_modal2" class="modal_recommend_btn">향수 추천받기</div>
-          </div>
-        </div>
-      </div>
-      <hr class="modal_line">
-      <div class="modal_content">
-        <div class="all_content_num_container">
-          총&nbsp;
-          <div class="all_content_num">24</div>
-          개
-        </div>
-        <div class="modal_recommend_content_container">
-          <div class="modal_recommend_content">
-            <div class="modal_profile_container">
-              <img class="modal_profile_pic" src="img/profile_pic1.png">
-              <div class="modal_profile_info">
-                <div class="modal_profile_nickname">인생의 수레바퀴</div>
-                <div class="modal_profile_date">2021-06-17</div>
-              </div>
-            </div>
-            <div class="modal_recommend_title">바다에 놀러갈 때 사용할 향수</div>
-            <div class="modal_recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-              추천해 주실 수 있나요?</div>
-            <div class="modal_recommended_container">
-              <img class="modal_recommended_img" src="img/sample_1.png">
-              <img class="modal_recommended_img" src="img/sample_2.png">
-              <img class="modal_recommended_img" src="img/sample_3.png">
-              <img class="modal_recommended_img" src="img/sample_4.png">
-              <img class="modal_recommended_img" src="img/sample_5.png">
-              <img class="modal_recommended_img" src="img/sample_6.png">
-              <img class="modal_recommended_img" src="img/sample_7.png">
-            </div>
-            <div class="modal_recommender_btn_area">
-              <div class="modal_recommender_btn">향수 추천하기</div>
-            </div>
-          </div>
-
-          <div class="modal_recommend_content">
-            <div class="modal_profile_container">
-              <img class="modal_profile_pic" src="img/profile_pic1.png">
-              <div class="modal_profile_info">
-                <div class="modal_profile_nickname">인생의 수레바퀴</div>
-                <div class="modal_profile_date">2021-06-17</div>
-              </div>
-            </div>
-            <div class="modal_recommend_title">바다에 놀러갈 때 사용할 향수</div>
-            <div class="modal_recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-              추천해 주실 수 있나요?</div>
-            <div class="modal_recommended_container">
-              <img class="modal_recommended_img" src="img/sample_1.png">
-              <img class="modal_recommended_img" src="img/sample_2.png">
-              <img class="modal_recommended_img" src="img/sample_3.png">
-              <img class="modal_recommended_img" src="img/sample_4.png">
-              <img class="modal_recommended_img" src="img/sample_5.png">
-              <img class="modal_recommended_img" src="img/sample_6.png">
-              <img class="modal_recommended_img" src="img/sample_7.png">
-            </div>
-            <div class="modal_recommender_btn_area">
-              <div class="modal_recommender_btn">향수 추천하기</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="modal2" class="modal_window_2">
-      <div class="close_area2"><img src="img/x_btn.svg"></div>
-      <div class="modal2_title">
-        향수 추천받기
-      </div>
-      <input type="text" placeholder="제목 입력" class="recommend_title_input">
-      <textarea type="text" size="30" class="recommend_explain_input" placeholder="어떤 향수를 추천받고 싶나요?"></textarea>
-      <div class="submit_recommend_btn_area">
-        <div id="submit_recommend" class="submit_recommend_btn">등록하기</div>
-      </div>
-    </div>
-  </div>
   <div id="modal_mag_1" class="modal_overlay">
     <div class="modal_window_mag">
       <div class="close_area3"><img src="img/x_btn.svg"></div>
@@ -423,6 +348,7 @@
     </div>
   </div>
   <script src="js/modal.js" type="text/javascript"></script>
+  <script src="js/carousel_recommand.js" type="text/javascript" defer></script>
 </body>
 
 </html>
