@@ -3,8 +3,9 @@ const pool = mysql.createPool(
   {
     connectionLimit: 10,
     host: "localhost",
-    user: "afterglow",
-    password: "AOVImSs9WIoCF4yL",
+    user: "root",
+    password: "mysql",
+    port: 3306,
     database: "afterglow"
   });
 
