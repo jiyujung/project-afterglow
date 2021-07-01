@@ -7,9 +7,14 @@
   <link rel="stylesheet" href="css/header.css" type="text/css" />
   <link rel="stylesheet" href="css/my_page.css" type="text/css" />
   <title>여향 | My Page</title>
+  <script>
+    window.onload = function () {
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
 </head>
-
 <body>
+  <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
   <header>
     <a href="/"><img class="logo" src="img/logo.svg" alt="logo"></a>
     <nav>
@@ -51,24 +56,36 @@
         <a class="cta_mypage logout" href="/auth/logout">로그아웃 ></a>
       </div>
       <div class="wishlist_container">
-        <div class="wishlist_left_btn">
+        <div class="wishlist_left_btn" onclick="slider.prev()">
           <img src="img/left_arrow.svg">
         </div>
         <div class="wishlist_content">
           <h1>찜한 상품</h1>
+          <div id="slider">
+            <div class="item"><img class="item_img" src="product/1.png"></div>
+            <div class="item"><img class="item_img" src="product/4.png"></div>
+            <div class="item"><img class="item_img" src="product/5.png"></div>
+            <div class="item"><img class="item_img" src="product/8.png"></div>
+            <div class="item"><img class="item_img" src="product/9.png"></div>
+            <div class="item"><img class="item_img" src="product/12.png"></div>
+            <div class="item"><img class="item_img" src="product/14.png"></div>
+          </div>
         </div>
-        <div class="wishlist_right_btn">
+        <div class="wishlist_right_btn" onclick="slider.next()">
           <img src="img/right_arrow.svg">
         </div>
       </div>
     </div>
     <div class="bottom_container">
       <div class="my_review_container">
-
+        <h1>내가 작성한 후기</h1>
       </div>
-      <div class="my_recommand_container"></div>
+      <div class="my_recommand_container">
+        <h1>이럴 땐 이런 향수</h1>
+      </div>
     </div>
   </section>
+  <script type="text/javascript" src="js/carousel.js" defer></script>
 </body>
 
 </html>
