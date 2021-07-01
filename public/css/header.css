@@ -1,23 +1,23 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 li,
 a,
 button {
-  font-size: 1.25rem;
   color: #434343;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 130px;
   padding: 20px 82px;
+  justify-content: space-between;
+  align-items: center;
   border-style: solid;
   border-width: 0.5px 1px 1px;
   border-color: #434343;
@@ -53,16 +53,16 @@ header {
 }
 
 button {
-  background-color: rgb(66, 66, 66);
   border: none;
+  color: white;
+  background-color: rgb(66, 66, 66);
   border-radius: 50px;
   cursor: pointer;
-  color: white;
 }
 
-.user_picture{
-  margin-top: 14px;
+.user_picture {
   width: 34px;
   height: 34px;
+  margin-top: 14px;
   border-radius: 100px;
 }

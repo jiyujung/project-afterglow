@@ -9,16 +9,16 @@ section {
 }
 
 h1 {
-  font-size: 24px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 24px;
   line-height: 37px;
 }
 
 h2 {
-  font-size: 20px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 20px;
   line-height: 31px;
   margin-bottom: 24px;
 }
@@ -29,11 +29,11 @@ h3 {
 }
 
 input[type='text'] {
-  height: 32px;
   width: 200px;
-  background-color: #f8f8f3;
-  line-height: normal;
+  height: 32px;
   font-size: 16px;
+  line-height: normal;
+  background-color: #f8f8f3;
   border-style: none;
   outline-style: none;
   -webkit-appearance: none;
@@ -63,8 +63,8 @@ input[type='checkbox']:checked {
 
 .left_container {
   display: fixed;
-  flex-direction: column;
   width: 348px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 1px 1px 1px;
   border-color: #434343;
@@ -72,8 +72,8 @@ input[type='checkbox']:checked {
 
 .search_area {
   display: flex;
-  flex-direction: row;
   width: 228px;
+  flex-direction: row;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -87,8 +87,8 @@ input[type='checkbox']:checked {
 
 .all_search_area {
   display: flex;
-  flex-direction: column;
   height: 166.5px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -98,8 +98,8 @@ input[type='checkbox']:checked {
 
 .dilution_area {
   display: flex;
-  flex-direction: column;
   height: 351px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -121,17 +121,17 @@ input[type='checkbox']:checked {
 }
 
 .check_text {
-  font-size: 18px;
-  font-weight: normal;
   color: #434343;
-  margin-left: 8px;
+  font-weight: normal;
+  font-size: 18px;
   line-height: 28px;
+  margin-left: 8px;
 }
 
 .brand_area {
   display: flex;
-  flex-direction: column;
   height: 452px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -141,11 +141,11 @@ input[type='checkbox']:checked {
 
 .scroll_check_area {
   display: flex;
+  width: 228px;
+  height: 250px;
   margin-top: 30px;
   flex-direction: column;
   overflow-y: scroll;
-  width: 228px;
-  height: 250px;
 }
 
 .scroll_check_area::-webkit-scrollbar {
@@ -161,8 +161,8 @@ input[type='checkbox']:checked {
 }
 .note_area {
   display: flex;
-  flex-direction: column;
   height: 452px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -172,8 +172,8 @@ input[type='checkbox']:checked {
 
 .right_container {
   display: flex;
-  flex-direction: column;
   width: 1572px;
+  flex-direction: column;
   border-style: solid;
   border-width: 0px 1px 1px 0px;
   border-color: #434343;
@@ -181,10 +181,10 @@ input[type='checkbox']:checked {
 
 .right_nav_container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   width: 1572px;
   height: 80.5px;
+  flex-direction: row;
+  align-items: center;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: #434343;
@@ -198,9 +198,9 @@ input[type='checkbox']:checked {
 }
 
 .align_btn {
-  font-size: 20px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 20px;
   margin-right: 30px;
   opacity: 40%;
 }
@@ -211,15 +211,16 @@ input[type='checkbox']:checked {
 }
 
 .category_text {
-  font-size: 24px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 24px;
 }
 
 .right_content_container {
   display: flex;
-  flex-direction: row;
   width: 1572px;
+  height: 100%;
+  flex-direction: row;
 }
 
 .list_content_container {
@@ -232,8 +233,8 @@ input[type='checkbox']:checked {
 
 .list_container {
   display: flex;
-  flex-flow: row wrap;
   width: 1372px;
+  flex-flow: row wrap;
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 130px;
@@ -242,11 +243,11 @@ input[type='checkbox']:checked {
 
 .product_container {
   display: flex;
+  width: 390px;
+  height: 530px;
   flex-flow: column;
   align-items: center;
   justify-content: flex-end;
-  width: 390px;
-  height: 530px;
   margin-bottom: 20px;
 }
 
@@ -262,19 +263,19 @@ input[type='checkbox']:checked {
 }
 
 .brand {
-  font-size: 14px;
-  font-weight: normal;
   color: #434343;
-  margin-top: 30px;
+  font-weight: normal;
+  font-size: 14px;
   line-height: 22px;
+  margin-top: 30px;
 }
 
 .name {
-  font-size: 18px;
-  font-weight: normal;
   color: #434343;
-  margin-top: 6px;
+  font-weight: normal;
+  font-size: 18px;
   line-height: 28px;
+  margin-top: 6px;
 }
 
 .price_container {
@@ -285,19 +286,19 @@ input[type='checkbox']:checked {
 }
 
 .price {
-  font-size: 16px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 16px;
   line-height: 25px;
   margin-right: 2px;
 }
 
 .pagenum_container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 1372px;
   height: 130px;
+  flex-direction: row;
+  justify-content: center;
   border-style: solid;
   border-width: 1px 0px 0px 0px;
   border-color: #434343;
@@ -306,16 +307,16 @@ input[type='checkbox']:checked {
 }
 
 .pagenum_selected {
-  font-size: 20px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 20px;
   margin-right: 20px;
 }
 
 .pagenum_unselected {
-  font-size: 20px;
-  font-weight: normal;
   color: #434343;
+  font-weight: normal;
+  font-size: 20px;
   opacity: 40%;
   cursor: pointer;
   margin-right: 20px;
@@ -323,8 +324,8 @@ input[type='checkbox']:checked {
 
 .rv_container {
   display: flex;
-  flex-direction: column;
   width: 200px;
+  flex-direction: column;
   padding-top: 26px;
   padding-left: 30px;
 }
@@ -332,15 +333,12 @@ input[type='checkbox']:checked {
 .rv_product {
   width: 140px;
   height: 140px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #434343;
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .rv_image {
-  max-width: 139px;
-  max-height: 139px;
-  margin: 0 auto;
+  margin: auto;
+  max-width: 120px;
+  max-height: 120px;
 }
