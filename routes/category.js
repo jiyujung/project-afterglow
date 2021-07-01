@@ -27,7 +27,7 @@ router.get('/fragrance', function (req, res, next) {
 
         connection.query(sql, ['%' + q + '%', '%' + q + '%', '%' + q + '%'], function (err, rows) {
             if (err) console.error("error: " + err);
-            res.render('fragrance', { user: req.user, q: q, rows: rows, page: page, length: rows.length - 1, page_num: 12, pass: true });
+            res.render('fragrance', { user: req.user, q: q, rows: rows, page: page, length: rows.length - 1, page_num: 12, pass: true});
             connection.release();
         });
     });
