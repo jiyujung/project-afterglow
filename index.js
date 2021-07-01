@@ -26,7 +26,7 @@ app.use('/category', require('./routes/category'));
 app.use('/products', require('./routes/products'));
 
 // Port setting
-const port = 3001;
-app.listen(port, function () {
+const port = 3000;
+app.listen(port, function(){
   console.log(`server on! http://localhost:${port}`);
 });
