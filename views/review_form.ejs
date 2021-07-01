@@ -21,7 +21,7 @@
         <nav>
             <ul class="nav_links">
                 <li>
-                    <a href="recommend">추천</a>
+                    <a href="/recommend">추천</a>
                 </li>
                 <li>
                     <a href="/category/fragrance?q=&page=1&sorter=latest-asc">프레그런스</a>
@@ -37,11 +37,9 @@
         <ul class="cta_area">
             <li>
                 <% if(!user){ %>
-                <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
+                    <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
                 <% } else { %>
-                <!-- <p>Welcome <%= user.displayName %></p> -->
-                <!-- <a class="cta_mypage" href="auth/logout"><img src="<%= user.picture%>"></a> -->
-                <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
+                    <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
                 <% } %>
             </li>
         </ul>
