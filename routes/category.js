@@ -4,38 +4,35 @@ const router = express.Router();
 const pool = require('./db.js');
 const url = require('url');
 
+function selectCategory(category) {
+    switch (category) {
+        case "fragrance":
+            return '1';
+        case "bath-and-body":
+            return '2';
+        case "home-fragrance":
+            return '3';
+    }
+}
+
+function selectSorter(sorter) {
+    switch (sorter) {
+        case "latest-asc":
+            return 'p_id desc'
+        case "price-desc":
+            return 'p_price desc'
+        case "price-asc":
+            return 'p_price asc'
+    }
+}
+
 router.get('/:category', function (req, res, next) {
     const q = req.query.q;
     const page = req.query.page;
     const sorter = req.query.sorter;
     const category = req.params.category;
-    let base = ''
-    let categoryNum = ''
-    switch (category) {
-        case "fragrance":
-            categoryNum = '1';
-            break;
-        case "bath-and-body":
-            categoryNum = '2';
-            break;
-        case "home-fragrance":
-            categoryNum = '3';
-            break;
-    }
-    switch (sorter) {
-        case "latest-asc":
-            base = 'p_id desc'
-            break;
-        case "price-desc":
-            base = 'p_price desc'
-            break;
-        case "price-asc":
-            base = 'p_price asc'
-            break;
-    }
-    console.log(base);
     pool.getConnection(function (err, connection) {
-        const sql = "SELECT * FROM product WHERE p_category = " + categoryNum + " and (p_brand like ? or p_name like ? or p_note like ?) ORDER BY " + base;
+        const sql = "SELECT * FROM product WHERE p_category = " + selectCategory(category) + " and (p_brand like ? or p_name like ? or p_note like ?) ORDER BY " + selectSorter(sorter);
         console.log(sql);
 
         connection.query(sql, ['%' + q + '%', '%' + q + '%', '%' + q + '%'], function (err, rows) {
