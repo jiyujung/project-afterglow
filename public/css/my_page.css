@@ -4,13 +4,21 @@ body {
     background-color: #f8f8f3;
 }
 
-h2{
+h1{
+    color: #434343;
+    font-weight: bold;
+    font-size: 34px; 
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+h2 {
     color: #434343;
     font-weight: normal;
     font-size: 24px;
 }
 
-.top_container{
+.top_container {
     display: flex;
     width: 1920px;
     height: 410px;
@@ -18,17 +26,17 @@ h2{
     border-bottom: solid #434343 1px;
 }
 
-.profile_container{
+.profile_container {
     display: flex;
     width: 388px;
     height: 410px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-        border-right: solid #434343 1px;
+    border-right: solid #434343 1px;
 }
 
-.profile_picture{
+.profile_picture {
     width: 148px;
     height: 148px;
     border: solid #434343 1px;
@@ -36,20 +44,20 @@ h2{
     margin-top: 72px;
 }
 
-.nickname_area{
+.nickname_area {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 20px;
 }
 
-.nickname{
+.nickname {
     color: #434343;
     font-size: 40px;
     margin-right: 6px;
 }
 
-.logout{
+.logout {
     color: #434343;
     font-size: 16px;
     margin-right: 20px;
@@ -57,30 +65,63 @@ h2{
     align-self: flex-end;
 }
 
-.wishlist_container{
-
+.wishlist_container {
+    display: flex;
+    width: 1532px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.wishlist_left_btn{
-
+.wishlist_left_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 410px;
+    border-right: solid 1px #434343;
 }
 
-.wishlist_content{
-
+.wishlist_content {
+    display: flex;
+    flex-direction: column;
+    width: 1316px;
 }
 
-.wishlist_right_btn{
-
+.item_img{
+    max-width: 190px;
+    max-height: 190px;
 }
 
-.bottom_container{
-
+#slider{
+    margin-top: 40px;
+    margin-left: 40px;
 }
 
-.my_review_container{
-
+.wishlist_right_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 410px;
+    border-left: solid 1px #434343;
 }
 
-.my_recommand_container{
+.bottom_container {
+    display: flex;
+    flex-direction: row;
+}
 
+.my_review_container {
+    display: flex;
+    flex-direction: column;
+    width: 1025px;
+    height: 540px;
+    border-right: solid 1px #434343;
+}
+
+.my_recommand_container {
+    display: flex;
+    flex-direction: column;
+    width: 895px;
+    height: 540px;
 }
