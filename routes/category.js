@@ -4,6 +4,7 @@ const router = express.Router();
 const pool = require('./db.js');
 const url = require('url');
 
+// 카테고리 판별 함수(db에는 카테고리가 fragrance는 1, bath-and-body는 2, home-fragrance는 3으로 들어있기 때문)
 function selectCategory(category) {
     switch (category) {
         case "fragrance":
@@ -15,6 +16,7 @@ function selectCategory(category) {
     }
 }
 
+// 정렬 판별 함수(최신순은 p_id를 역으로 정렬, 낮은 가격순은 p_price를 낮은 가격부터 정렬, 높은 가격순은 p_price를 높은 가격부터 정렬)
 function selectSorter(sorter) {
     switch (sorter) {
         case "latest-asc":
@@ -26,6 +28,7 @@ function selectSorter(sorter) {
     }
 }
 
+// 상품 리스트
 router.get('/:category', function (req, res, next) {
     const q = req.query.q;
     const page = req.query.page;
