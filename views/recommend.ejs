@@ -14,6 +14,7 @@
     }
   </script>
 </head>
+
 <body>
   <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
   <header>
@@ -38,9 +39,9 @@
       <li>
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-        <% } else { %>
-          <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
-        <% } %>
+          <% } else { %>
+            <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
+            <% } %>
       </li>
     </ul>
   </header>
@@ -186,48 +187,16 @@
           </div>
           <div id="slider">
             <div class="item">
-              <div class="recommend_nickname_area">
-                <div class="recommend_nickname">인생의 수레바퀴</div>
-                <h7>님</h7>
-              </div>
-              <div class="recommend_products_area">
-              </div>
-              <div class="recommend_title">바다에 놀러갈 때 사용할 향수 추천</div>
-              <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-                추천해주세요!</div>
             </div>
             <div class="item">
-              <div class="recommend_nickname_area">
-                <div class="recommend_nickname">인생의 수레바퀴</div>
-                <h7>님</h7>
-              </div>
-              <div class="recommend_products_area">
-              </div>
-              <div class="recommend_title">바다에 놀러갈 때 사용할 향수 추천</div>
-              <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-                추천해주세요!</div>
             </div>
             <div class="item">
-              <div class="recommend_nickname_area">
-                <div class="recommend_nickname">인생의 수레바퀴</div>
-                <h7>님</h7>
-              </div>
-              <div class="recommend_products_area">
-              </div>
-              <div class="recommend_title">바다에 놀러갈 때 사용할 향수 추천</div>
-              <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-                추천해주세요!</div>
             </div>
             <div class="item">
-              <div class="recommend_nickname_area">
-                <div class="recommend_nickname">인생의 수레바퀴</div>
-                <h7>님</h7>
-              </div>
-              <div class="recommend_products_area">
-              </div>
-              <div class="recommend_title">바다에 놀러갈 때 사용할 향수 추천</div>
-              <div class="recommend_explain">여름 방학을 맞아 친구들과 광안리 해변으로 여행을 가기로 했습니다. 바다에 놀러갈 때 사용하기 좋은 향수를
-                추천해주세요!</div>
+            </div>
+            <div class="item">
+            </div>
+            <div class="item">
             </div>
           </div>
           <div class="recommend_right_btn" onclick="slider.next()">
