@@ -38,9 +38,9 @@
             <li>
                 <% if(!user){ %>
                     <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-                <% } else { %>
-                    <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture %>"></a>
-                <% } %>
+                    <% } else { %>
+                        <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture %>"></a>
+                        <% } %>
             </li>
         </ul>
     </header>
@@ -153,7 +153,6 @@
                 <div class="category_text">배스 앤 바디 ></div>
                 <div class="align_menu">
                     <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=latest-asc">최신순</a></div>
-                    <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=latest-asc">인기순</a></div>
                     <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=price-asc">낮은가격순</a></div>
                     <div class="align_btn"><a href="/category/bath-and-body?q=&page=1&sorter=price-desc">높은가격순</a></div>
                 </div>
@@ -161,11 +160,10 @@
             <div class="right_content_container">
                 <div class="list_content_container">
                     <div class="list_container">
-                        <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){
-                            if(i> length){
-                                i++;
+                        <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){ if(i> length){
+                            i++;
                             }else{
-                                var oneItem = rows[i];
+                            var oneItem = rows[i];
                             %>
                             <a href="/products/<%=oneItem.p_id%>" class="product_container">
                                 <img class="product_img" src="/product/<%=oneItem.p_img%>">
@@ -184,7 +182,7 @@
                                     </div>
                                 </div>
                             </a>
-                        <% } } %>
+                            <% } } %>
                     </div>
                     <div class="pagenum_container">
                         <% for(var j=0; j < rows.length / page_num; j++){ %>
@@ -193,7 +191,7 @@
                                     <%= j + 1 %>
                                 </div>
                             </a>
-                        <% } %>
+                            <% } %>
                     </div>
                 </div>
                 <div class="rv_container">

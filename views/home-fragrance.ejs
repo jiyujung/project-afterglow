@@ -13,6 +13,7 @@
     }
   </script>
 </head>
+
 <body>
   <div id="loading"><img id="loading-image" src="/img/loading.gif" alt="Loading..." /></div>
   <header>
@@ -37,9 +38,9 @@
       <li>
         <% if(!user){ %>
           <a class="cta_mypage" href="/auth/login"><img src="/img/mypage.svg"></a>
-        <% } else { %>
-          <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
-        <% } %>
+          <% } else { %>
+            <a class="cta_mypage" href="/mypage"><img class="user_picture" src="<%= user.picture%>"></a>
+            <% } %>
       </li>
     </ul>
   </header>
@@ -152,7 +153,6 @@
         <div class="category_text">홈 프레그런스 ></div>
         <div class="align_menu">
           <div class="align_btn"><a href="/category/home-fragrance?q=&page=1&sorter=latest-asc">최신순</a></div>
-          <div class="align_btn"><a href="/category/home-fragrance?q=&page=1&sorter=latest-asc">인기순</a></div>
           <div class="align_btn"><a href="/category/home-fragrance?q=&page=1&sorter=price-asc">낮은가격순</a></div>
           <div class="align_btn"><a href="/category/home-fragrance?q=&page=1&sorter=price-desc">높은가격순</a></div>
         </div>
@@ -160,30 +160,29 @@
       <div class="right_content_container">
         <div class="list_content_container">
           <div class="list_container">
-            <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){
-              if(i> length){
-                i++;
+            <% for(var i=(page * page_num) - page_num; i<(page * page_num); i++){ if(i> length){
+              i++;
               }else{
-                var oneItem = rows[i];
-            %>
-            <a href="/products/<%=oneItem.p_id%>" class="product_container">
-              <img class="product_img" src="/product/<%=oneItem.p_img%>">
-              <div class="product_info">
-                <div class="brand">
-                  <%=oneItem.p_brand%>
-                </div>
-                <div class="name">
-                  <%=oneItem.p_name%>
-                </div>
-                <div class="price_container">
-                  <div class="price">
-                    <%=oneItem.p_price%>
+              var oneItem = rows[i];
+              %>
+              <a href="/products/<%=oneItem.p_id%>" class="product_container">
+                <img class="product_img" src="/product/<%=oneItem.p_img%>">
+                <div class="product_info">
+                  <div class="brand">
+                    <%=oneItem.p_brand%>
                   </div>
-                  <h3>원</h3>
+                  <div class="name">
+                    <%=oneItem.p_name%>
+                  </div>
+                  <div class="price_container">
+                    <div class="price">
+                      <%=oneItem.p_price%>
+                    </div>
+                    <h3>원</h3>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <% } } %>
+              </a>
+              <% } } %>
           </div>
           <div class="pagenum_container">
             <% for(var j=0; j < rows.length / page_num; j++){ %>
@@ -197,9 +196,15 @@
         </div>
         <div class="rv_container">
           <h2>최근 본 상품</h2>
-          <a href="/products/99"><div class="rv_product"><img class="rv_image" src="/product/165.png"></div></a>
-          <a href="/products/100"><div class="rv_product"><img class="rv_image" src="/product/166.png"></div></a>
-          <a href="/products/101"><div class="rv_product"><img class="rv_image" src="/product/167.png"></div></a>
+          <a href="/products/99">
+            <div class="rv_product"><img class="rv_image" src="/product/165.png"></div>
+          </a>
+          <a href="/products/100">
+            <div class="rv_product"><img class="rv_image" src="/product/166.png"></div>
+          </a>
+          <a href="/products/101">
+            <div class="rv_product"><img class="rv_image" src="/product/167.png"></div>
+          </a>
           <div class="rv_product"></div>
         </div>
       </div>
