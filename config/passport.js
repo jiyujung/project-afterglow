@@ -11,6 +11,7 @@ passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
+// 구글 로그인
 passport.use(new GoogleStrategy(
   {
     clientID: "683854711500-pd4725f8q4rtnum1qfff7hmod2dhia80.apps.googleusercontent.com",
@@ -35,6 +36,8 @@ passport.use(new GoogleStrategy(
   });
 }));
 
+
+// 페이스북 로그인
 passport.use(new FacebookStrategy(
   {
     clientID: "966046294128930",
