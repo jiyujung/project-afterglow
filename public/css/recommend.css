@@ -304,6 +304,7 @@ h6 {
   display: flex;
   height: 488px;
   flex-direction: row;
+  border-bottom: solid #434343 1px;
 }
 
 .recommend_left_btn {
@@ -312,7 +313,7 @@ h6 {
   align-items: center;
   justify-content: center;
   border-style: solid;
-  border-width: 0px 1px 1px 0px;
+  border-width: 0px 1px 0px 0px;
   border-color: #434343;
 }
 
@@ -322,18 +323,13 @@ h6 {
   align-items: center;
   justify-content: center;
   border-style: solid;
-  border-width: 0px 0px 1px 1px;
+  border-width: 0px 0px 0px 1px;
   border-color: #434343;
 }
 
 #slider {
-  display: flex;
-  width: 1736px;
-  flex-direction: row;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-  border-color: #434343;
   margin-top: 60px;
+  margin-left: 40px;
 }
 
 .recommend_btn_area {
@@ -356,14 +352,9 @@ h6 {
 }
 
 .item {
-  display: flex;
-  width: 700px;
-  height: 370px;
-  flex-direction: column;
   border-style: solid;
   border-width: 1px;
   border-color: #434343;
-  margin-right: 20px;
 }
 
 .recommend_nickname_area {
