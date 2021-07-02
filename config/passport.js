@@ -40,8 +40,8 @@ passport.use(new GoogleStrategy(
 // 페이스북 로그인
 passport.use(new FacebookStrategy(
   {
-    clientID: "1115433299015262",
-    clientSecret: "5d399b726987d71903c8c6277dc4841e",
+    clientID: "966046294128930",
+    clientSecret: "6e414403239381579262f732a7f84db3",
     callbackURL: '/auth/facebook/callback',
     scope: ['public_profile', 'picture'],
     profileFields: ['id', 'displayName'],
